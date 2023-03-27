@@ -29,14 +29,18 @@ export class AppComponent {
 
   cacherDetails():void
   {
-    // if(this.detailBouton)
-    // {
-    //   this.detailBouton = false;
-    // }
-    // else
-    // {
-    //   this.detailBouton = true;
-    // }
     this.detailBouton = !this.detailBouton
   }
+
+  texteSaisi: string = "";
+
+   oUtil:{ nom:string, prenom:string, email:string, tel:string, age:number } = {"nom":"Test", "prenom":"Test", "email":"test", "tel":"000", "age":0}
+
+   ajouterUser():void
+   {
+    this.oUtil.nom = this.texteSaisi;
+    this.utilisateur.push(this.oUtil)
+   }
+
 }
+
