@@ -18,4 +18,25 @@ export class AppComponent {
   {
     console.log("bouton cliqué")
   }
+
+  utilisateur:any[] = [
+    {"nom":"Dupond", "prenom":"Jean", "email":"info@infor.fr", "tel":"04949395", "age":23},
+    {"nom":"Dupont", "prenom":"Jeanne", "email":"info@information.fr", "tel":"04539395", "age":54},
+    {"nom":"Dumont", "prenom":"Jacques", "email":"infoJE@infor.fr", "tel":"04946595", "age":31}
+  ]
+
+  detailBouton:boolean = true;
+
+  cacherDetails():void
+  {
+    // if(this.detailBouton)
+    // {
+    //   this.detailBouton = false;
+    // }
+    // else
+    // {
+    //   this.detailBouton = true;
+    // }
+    this.detailBouton = !this.detailBouton
+  }
 }
